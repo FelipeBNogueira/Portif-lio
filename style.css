@@ -7,7 +7,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f6f9fc;
-  color: #333;
+  color: #183154;
   line-height: 1.6;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 .hero {
-  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  background: linear-gradient(135deg, #183154, #384f6f);
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -31,17 +31,19 @@ body {
 .hero p {
   font-size: 1.2rem;
   margin-top: 10px;
+  color: #f0f0f0;
 }
 
 .dashboard {
   padding: 60px 20px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .dashboard h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
+  color: #183154;
 }
 
 .iframe-container {
@@ -60,13 +62,14 @@ body {
 
 .services {
   padding: 60px 20px;
-  background: #f0f4ff;
+  background: #f6f9fc;
 }
 
 .services h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
+  color: #183154;
 }
 
 .cards {
@@ -83,17 +86,22 @@ body {
   width: 300px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   text-align: center;
+  border-top: 5px solid #f78235;
 }
 
 .card h3 {
-  color: #7f00ff;
+  color: #183154;
   margin-bottom: 10px;
+}
+
+.card p {
+  color: #384f6f;
 }
 
 footer {
   padding: 20px;
   text-align: center;
-  background: #ececec;
+  background: #183154;
   font-size: 0.9rem;
-  color: #666;
+  color: white;
 }
