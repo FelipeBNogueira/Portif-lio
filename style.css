@@ -28,14 +28,14 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 5px; /* Bem mais próximo */
+  margin-bottom: 5px;
 }
 
 .subtitulo-site {
-  font-size: 1.875rem; /* 25% maior que 1.5rem */
+  font-size: 1.875rem;
   color: #f78235;
-  font-weight: 300;
-  margin-top: 0px; /* Colado */
+  font-weight: 600; /* negrito aplicado */
+  margin-top: 0px;
 }
 
 .dashboard {
@@ -56,7 +56,7 @@ body {
   margin-bottom: 30px;
   color: #384f6f;
   font-weight: 400;
-  margin-top: 0; /* alinhado com título */
+  margin-top: 0;
 }
 
 .iframe-container {
