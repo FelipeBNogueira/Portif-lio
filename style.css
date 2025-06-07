@@ -127,22 +127,23 @@ footer {
 }
 
 .social-icons a {
-  background: white;
-  color: #183154;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  display: inline-block;
   width: 50px;
   height: 50px;
-  font-size: 1.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
-  background-color: #f78235;
-  color: white;
   transform: scale(1.1);
+}
+
+.social-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
 }
