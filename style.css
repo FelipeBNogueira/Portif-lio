@@ -28,13 +28,14 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: white;
+  margin-bottom: 10px; /* Reduzido pela metade */
 }
 
 .subtitulo-site {
-  font-size: 1.5rem;
+  font-size: 1.875rem; /* 1.5rem + 25% = 1.875rem */
   color: #f78235;
-  margin-top: 10px;
   font-weight: 300;
+  margin-top: 0px; /* Remove espaço extra */
 }
 
 .dashboard {
@@ -51,9 +52,10 @@ body {
 
 .subtexto-dashboard {
   text-align: center;
-  font-size: 1.1rem;
-  color: #384f6f;
+  font-size: 1.25rem;
   margin-bottom: 30px;
+  color: #384f6f;
+  font-weight: 400;
 }
 
 .iframe-container {
