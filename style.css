@@ -34,7 +34,7 @@ body {
 .subtitulo-site {
   font-size: 1.875rem;
   color: #f78235;
-  font-weight: 600; /* negrito aplicado */
+  font-weight: 600;
   margin-top: 0px;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .iframe-container {
   width: 100%;
-  height: 600px;
+  height: 800px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   border-radius: 12px;
   overflow: hidden;
