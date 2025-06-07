@@ -24,22 +24,17 @@ body {
   text-align: center;
 }
 
-.hero h1 {
+.titulo-site {
   font-size: 3rem;
+  font-weight: 700;
+  color: white;
 }
 
-.subtitle {
-  font-weight: 300;
+.subtitulo-site {
   font-size: 1.5rem;
   color: #f78235;
-  display: block;
   margin-top: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #f0f0f0;
+  font-weight: 300;
 }
 
 .dashboard {
@@ -50,8 +45,15 @@ body {
 .dashboard h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #183154;
+}
+
+.subtexto-dashboard {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #384f6f;
+  margin-bottom: 30px;
 }
 
 .iframe-container {
