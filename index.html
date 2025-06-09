@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Potion Solutions - Home</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potion Solutions - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS for font and specific rules not handled by Tailwind -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1 class="titulo-site">Potion Solutions</h1>
-      <p class="subtitulo-site">Transformamos dados em decisões inteligentes</p>
-      <nav class="nav-menu">
-        <a href="index.html">Início</a>
-        <a href="analises.html">Análises</a>
-        <a href="mailto:felipe@potionsolution.com">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="intro">
-    <div class="container">
-      <h2>Soluções em Análise de Dados</h2>
-      <p>Desenvolvemos painéis interativos e análises personalizadas para empresas que desejam tomar decisões baseadas em dados reais. Do comercial ao financeiro, oferecemos dashboards objetivos, visuais e prontos para acelerar os resultados do seu negócio.</p>
-      <a href="analises.html" class="cta-button">Ver Exemplo de Análises</a>
-    </div>
-  </section>
-
-  <section class="servicos">
-    <div class="container">
-      <h2>Serviços</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Dashboards Personalizados</h3>
-          <p>Análises sob medida para o seu modelo de negócio.</p>
+<body class="bg-[#f4f7f6]">
+    <!-- Header/Hero Section -->
+    <header class="bg-[#183154] text-white py-20 md:py-24 text-center relative overflow-hidden rounded-b-xl">
+        <!-- Decorative shapes for visual interest -->
+        <div class="absolute top-0 left-0 w-48 h-48 bg-[#f78235]/10 rounded-full blur-xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-56 h-56 bg-[#f78235]/15 rounded-full blur-xl transform translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Potion Solutions</h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 animate-fade-in-up">Transformamos dados em decisões inteligentes</p>
+            <nav class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mt-8">
+                <a href="index.html" class="text-lg font-semibold text-white hover:text-[#f78235] transition duration-300 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20">Início</a>
+                <a href="analises.html" class="text-lg font-semibold text-white hover:text-[#f78235] transition duration-300 px-4 py-2 rounded-md hover:bg-white/10">Análises</a>
+                <a href="mailto:felipe@potionsolution.com" class="text-lg font-semibold text-white hover:text-[#f78235] transition duration-300 px-4 py-2 rounded-md hover:bg-white/10">Contato</a>
+            </nav>
         </div>
-        <div class="card">
-          <h3>Relatórios Comerciais</h3>
-          <p>Identifique os produtos, lojas ou regiões mais lucrativas.</p>
-        </div>
-        <div class="card">
-          <h3>Insights Financeiros</h3>
-          <p>Visualize receitas, despesas e projeções com clareza.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="cta">
-    <div class="container">
-      <h2>Vamos levar sua empresa ao próximo nível?</h2>
-      <p>Entre em contato para discutirmos como a Potion Solutions pode ajudar com dados, dashboards e decisões mais inteligentes.</p>
-      <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Potion%20Solutions!" class="cta-button">Fale com a Gente no WhatsApp</a>
-    </div>
-  </section>
+    <!-- Intro Section -->
+    <section class="bg-white py-20 md:py-24 text-center rounded-lg shadow-sm mx-4 md:mx-auto max-w-7xl mt-12 mb-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-8">Soluções em Análise de Dados</h2>
+            <p class="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed">Desenvolvemos painéis interativos e análises personalizadas para empresas que desejam tomar decisões baseadas em dados reais. Do comercial ao financeiro, oferecemos dashboards objetivos, visuais e prontos para acelerar os resultados do seu negócio.</p>
+            <a href="analises.html" class="inline-block px-8 py-4 bg-[#f78235] text-white rounded-xl font-bold text-lg hover:bg-opacity-90 transition duration-300 shadow-xl transform hover:-translate-y-1">Ver Exemplo de Análises</a>
+        </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <div class="social-icons">
-        <a href="mailto:felipe@potionsolution.com" target="_blank" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/cfbn-adm/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/FelipeBNogueira" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-      <p>© 2025 - Desenvolvido por Felipe Nogueira</p>
-    </div>
-  </footer>
+    <!-- Services Section -->
+    <section class="bg-[#f4f7f6] py-20 md:py-24 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-12">Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Dashboards Personalizados</h3>
+                    <p class="text-gray-600 leading-relaxed">Análises sob medida para o seu modelo de negócio, com visualizações claras e impactantes.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Relatórios Comerciais</h3>
+                    <p class="text-gray-600 leading-relaxed">Identifique os produtos, lojas ou regiões mais lucrativas e otimize suas estratégias de vendas.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Insights Financeiros</h3>
+                    <p class="text-gray-600 leading-relaxed">Visualize receitas, despesas e projeções com clareza para uma gestão financeira eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-[#183154] text-white py-24 md:py-28 text-center rounded-lg shadow-sm mx-4 md:mx-auto max-w-7xl mt-12 mb-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">Vamos levar sua empresa ao próximo nível?</h2>
+            <p class="text-lg sm:text-xl max-w-4xl mx-auto mb-12 text-gray-200 leading-relaxed">Entre em contato para discutirmos como a Potion Solutions pode ajudar com dados, dashboards e decisões mais inteligentes.</p>
+            <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Potion%20Solutions!" class="inline-block px-10 py-5 bg-[#f78235] text-white rounded-xl font-bold text-xl hover:bg-opacity-90 transition duration-300 shadow-xl transform hover:-translate-y-1">Fale com a Gente no WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#102038] text-gray-300 py-10 text-center rounded-t-xl">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:felipe@potionsolution.com" target="_blank" aria-label="E-mail" class="text-2xl text-gray-400 hover:text-[#f78235] transition duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/cfbn-adm/" target="_blank" aria-label="LinkedIn" class="text-2xl text-gray-400 hover:text-[#f78235] transition duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/FelipeBNogueira" target="_blank" aria-label="GitHub" class="text-2xl text-gray-400 hover:text-[#f78235] transition duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2025 - Desenvolvido por Felipe Nogueira</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Potion%20Solutions!" class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-xl text-3xl hover:bg-green-600 transition duration-300 z-50 transform hover:scale-110" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
