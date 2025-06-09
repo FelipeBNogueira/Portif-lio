@@ -62,7 +62,7 @@
             <p class="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed">Preencha o formulário abaixo para entrar em contato conosco. Sua mensagem será enviada por e-mail.</p>
             
             <div class="relative w-full rounded-xl shadow-2xl mx-auto max-w-2xl border-2 border-gray-300 p-8">
-                <!-- Formspree Endpoint -->
+                <!-- Formspree Endpoint - Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree endpoint -->
                 <form action="https://formspree.io/f/mvgrkwez" method="POST" class="w-full text-left space-y-6">
                     <div>
                         <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome Completo:</label>
@@ -74,7 +74,7 @@
                     </div>
                     <div>
                         <label for="telefone" class="block text-gray-700 text-sm font-bold mb-2">Telefone (DDD + Número):</label>
-                        <input type="tel" id="telefone" name="Telefone" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#f78235] focus:border-transparent" placeholder="(XX) XXXXX-XXXX" required>
+                        <input type="tel" id="telefone" name="Telefone" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#f78235] focus:border-transparent" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
                     </div>
                     <div>
                         <label for="mensagem" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
@@ -118,7 +118,7 @@
     <!-- Call to Action Section -->
     <section class="bg-[#183154] text-white py-24 md:py-28 text-center rounded-lg shadow-sm mx-4 md:mx-auto max-w-7xl mt-12 mb-12">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">Quero tomar decisões que geram lucro</h2>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8">Vamos levar a sua empresa para o próximo nível?</h2>
             <p class="text-lg sm:text-xl max-w-4xl mx-auto mb-12 text-gray-200 leading-relaxed">Entre em contato para discutirmos como a Potion Solutions pode ajudar com dados, dashboards e decisões mais inteligentes.</p>
             <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Potion%20Solutions!" class="inline-block px-10 py-5 bg-[#f78235] text-white rounded-xl font-bold text-xl hover:bg-opacity-90 transition duration-300 shadow-xl transform hover:-translate-y-1">QUERO TOMAR DECISÕES QUE GERAM LUCRO</a>
         </div>
@@ -144,6 +144,54 @@
 
     <!-- LinkedIn Profile Badge Script -->
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+    <!-- JavaScript for Contact Form Submission and Phone Formatting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#contactForm'); // Changed to querySelector as it's now a direct form, not an iframe container
+            const telefoneInput = document.getElementById('telefone');
+
+            // 1. Function to format phone number (DDD + Number)
+            telefoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+                let formattedValue = '';
+
+                if (value.length > 0) {
+                    // Add parentheses for DDD
+                    if (value.length > 2) {
+                        formattedValue = '(' + value.substring(0, 2) + ') ' + value.substring(2);
+                    } else {
+                        formattedValue = '(' + value;
+                    }
+                }
+
+                // Add hyphen for mobile numbers (9 digits after DDD)
+                if (formattedValue.length > 9 && formattedValue.indexOf(') 9') === 4) { // Checks for (XX) 9XXXX-XXXX format
+                    formattedValue = formattedValue.substring(0, 10) + '-' + formattedValue.substring(10);
+                } else if (formattedValue.length > 8 && formattedValue.indexOf(') 9') !== 4) { // Checks for (XX) XXXX-XXXX format
+                    formattedValue = formattedValue.substring(0, 9) + '-' + formattedValue.substring(9);
+                }
+
+                e.target.value = formattedValue.substring(0, 15); // Limit length to 15 characters (e.g., (99) 99999-9999)
+            });
+
+
+            // 2. Clear form fields after successful submission (Formspree handles redirect by default)
+            // Formspree, by default, redirects to a "Thank You" page or the referrer page.
+            // To prevent redirection and reset form using AJAX, we'd need to use Formspree's AJAX API.
+            // However, the current setup uses a direct POST (method="POST") which causes a page reload.
+            // If you want an AJAX submission with no page reload, you'd need their AJAX API,
+            // which involves slightly more setup on their side (e.g., disabling default redirect).
+            // For simplicity and directness, the form will clear upon successful *redirect* to Formspree's success message
+            // or if you configure Formspree to redirect back to your page with a success query parameter.
+
+            // The 'form.reset()' was previously in a fetch().then() block.
+            // For direct POST, the form will reset after the page reloads (if Formspree sends back to your site)
+            // or if you configure Formspree to redirect back to your page.
+            // If you wish to implement AJAX submission to avoid page reload and clear dynamically,
+            // let me know, and we can switch to Formspree's AJAX feature.
+        });
+    </script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Potion%20Solutions!" class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-xl text-3xl hover:bg-green-600 transition duration-300 z-50 transform hover:scale-110" target="_blank" aria-label="WhatsApp">
