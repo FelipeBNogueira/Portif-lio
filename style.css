@@ -119,28 +119,22 @@ footer {
   color: white;
 }
 
-.contact-cards {
+/* Novas regras para os ícones sociais */
+.social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px; /* Espaçamento entre os ícones */
   margin: 20px 0;
-  flex-wrap: wrap;
 }
 
-.contact-card {
-  background-color: #f78235;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  font-family: 'Segoe UI', sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.social-icons a {
+  color: white; /* Cor inicial dos ícones */
+  font-size: 2.2rem; /* Tamanho dos ícones */
+  transition: color 0.3s ease, transform 0.2s ease;
+  text-decoration: none; /* Remove sublinhado dos links */
 }
 
-.contact-card:hover {
-  background-color: #e06d1f;
-  transform: translateY(-2px);
+.social-icons a:hover {
+  color: #f78235; /* Cor dos ícones ao passar o mouse */
+  transform: translateY(-3px); /* Efeito de levante ao passar o mouse */
 }
