@@ -2,71 +2,96 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Potion Solutions - Data Analysis</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS for font and specific rules not handled by Tailwind -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-
-    <header class="hero">
-        <div class="container">
-            <h1 class="titulo-site">Potion Solutions</h1>
-            <p class="subtitulo-site">Data Analysis</p>
+<body class="bg-[#f4f7f6]">
+    <!-- Header/Hero Section -->
+    <header class="bg-[#183154] text-white py-20 md:py-24 text-center relative overflow-hidden rounded-b-xl">
+        <!-- Decorative shapes for visual interest -->
+        <div class="absolute top-0 left-0 w-48 h-48 bg-[#f78235]/10 rounded-full blur-xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-56 h-56 bg-[#f78235]/15 rounded-full blur-xl transform translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Potion Solutions</h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 animate-fade-in-up">Data Analysis</p>
+            <nav class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mt-8">
+                <a href="index.html" class="text-lg font-semibold text-white hover:text-[#f78235] transition duration-300 px-4 py-2 rounded-md hover:bg-white/10">Início</a>
+                <a href="analises.html" class="text-lg font-semibold text-white hover:text-[#f78235] transition duration-300 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20">Análises</a>
+                <a href="mailto:felipe@potionsolution.com" class="text-lg font-semibold text-white hover:text-[#f78235] transition duration-300 px-4 py-2 rounded-md hover:bg-white/10">Contato</a>
+            </nav>
         </div>
     </header>
 
-    <section class="dashboard">
-        <div class="container">
-            <h2>Análise Comercial</h2>
-            <h3 class="subtexto-dashboard">Transformando dados em decisões com precisão</h3>
-            <div class="iframe-container">
-                <iframe title="Painel de vendas Internacionais" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMWRkODc0ZGEtODg4OS00N2UxLThiNmItMWNkZWVmOGY5YWI3IiwidCI6IjUxYTQ3M2E0LTI5MDAtNGEyNC05MjgzLTI5Mzg5NjY5ZjNkYyJ9" frameborder="0" allowFullScreen="true"></iframe>
+    <!-- Dashboard Section -->
+    <section class="bg-white py-20 md:py-24 text-center rounded-lg shadow-sm mx-4 md:mx-auto max-w-7xl mt-12 mb-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-6">Análise Comercial</h2>
+            <h3 class="text-lg sm:text-xl text-gray-700 mb-10">Transformando dados em decisões com precisão</h3>
+            <div class="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl mx-auto max-w-5xl">
+                <!-- 16:9 aspect ratio for responsive iframe -->
+                <iframe title="Painel de vendas Internacionais" class="absolute top-0 left-0 w-full h-full border-0" src="https://app.powerbi.com/view?r=eyJrIjoiMWRkODc0ZGEtODg4OS00N2UxLThiNmItMWNkZWVmOGY5YWI3IiwidCI6IjUxYTQ3M2E0LTI5MDAtNGEyNC05MjgzLTI5Mzg5NjY5ZjNkYyJ9" allowFullScreen></iframe>
             </div>
         </div>
     </section>
 
-    <section class="services">
-        <div class="container">
-            <h2>O que você encontrará aqui</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Resumo de Vendas</h3>
-                    <p>Visualize o desempenho geral.</p>
+    <!-- Services Section -->
+    <section class="bg-[#f4f7f6] py-20 md:py-24 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-12">O que você encontrará aqui</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Resumo de Vendas</h3>
+                    <p class="text-gray-600 leading-relaxed">Visualize o desempenho geral de suas vendas com métricas chave e tendências.</p>
                 </div>
-                <div class="card">
-                    <h3>Top Produtos</h3>
-                    <p>Veja quais lojas geram mais receita.</p>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Top Produtos</h3>
+                    <p class="text-gray-600 leading-relaxed">Descubra quais produtos e lojas geram mais receita e impulsionam seus resultados.</p>
                 </div>
-                <div class="card">
-                    <h3>Comparações</h3>
-                    <p>Compare resultados mensais e identifique tendências.</p>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Comparações Detalhadas</h3>
+                    <p class="text-gray-600 leading-relaxed">Compare resultados mensais, trimestrais ou anuais para identificar tendências e oportunidades.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="mailto:felipe@potionsolution.com" target="_blank" aria-label="E-mail">
+    <!-- Footer -->
+    <footer class="bg-[#102038] text-gray-300 py-10 text-center rounded-t-xl">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:felipe@potionsolution.com" target="_blank" aria-label="E-mail" class="text-2xl text-gray-400 hover:text-[#f78235] transition duration-300 transform hover:-translate-y-1">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/cfbn-adm/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/cfbn-adm/" target="_blank" aria-label="LinkedIn" class="text-2xl text-gray-400 hover:text-[#f78235] transition duration-300 transform hover:-translate-y-1">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/FelipeBNogueira" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/FelipeBNogueira" target="_blank" aria-label="GitHub" class="text-2xl text-gray-400 hover:text-[#f78235] transition duration-300 transform hover:-translate-y-1">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
-            <p>© 2025 - Desenvolvido por Felipe Nogueira</p>
+            <p class="text-sm">&copy; 2025 - Desenvolvido por Felipe Nogueira</p>
         </div>
     </footer>
 
-    <!-- Botão Flutuante do WhatsApp - COM SEU NÚMERO JÁ ADICIONADO -->
-    <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Potion%20Solutions!" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp whatsapp-icon-fa"></i>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5585996103206?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Potion%20Solutions!" class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-xl text-3xl hover:bg-green-600 transition duration-300 z-50 transform hover:scale-110" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-
 </body>
 </html>
