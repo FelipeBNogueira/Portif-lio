@@ -1,140 +1,169 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f6f9fc;
-  color: #183154;
-  line-height: 1.6;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f6f9fc;
+    color: #183154;
+    line-height: 1.6;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .hero {
-  background: linear-gradient(135deg, #183154, #384f6f);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
+    background: linear-gradient(135deg, #183154, #384f6f);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .titulo-site {
-  font-size: 3rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 5px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
 }
 
 .subtitulo-site {
-  font-size: 1.875rem;
-  color: #f78235;
-  font-weight: 600;
-  margin-top: 0px;
+    font-size: 1.875rem;
+    color: #f78235;
+    font-weight: 600;
+    margin-top: 0px;
 }
 
 .dashboard {
-  padding: 60px 20px;
-  background-color: #ffffff;
+    padding: 60px 20px;
+    background-color: #ffffff;
 }
 
 .dashboard h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #183154;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #183154;
 }
 
 .subtexto-dashboard {
-  text-align: center;
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-  color: #384f6f;
-  font-weight: 400;
-  margin-top: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #384f6f;
+    font-weight: 400;
+    margin-top: 0;
 }
 
 .iframe-container {
-  width: 100%;
-  height: 800px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  overflow: hidden;
+    width: 100%;
+    height: 800px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .services {
-  padding: 60px 20px;
-  background: #f6f9fc;
+    padding: 60px 20px;
+    background: #f6f9fc;
 }
 
 .services h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #183154;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #183154;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  text-align: center;
-  border-top: 5px solid #f78235;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 5px solid #f78235;
 }
 
 .card h3 {
-  color: #183154;
-  margin-bottom: 10px;
+    color: #183154;
+    margin-bottom: 10px;
 }
 
 .card p {
-  color: #384f6f;
+    color: #384f6f;
 }
 
 footer {
-  padding: 20px;
-  text-align: center;
-  background: #183154;
-  font-size: 0.9rem;
-  color: white;
+    padding: 20px;
+    text-align: center;
+    background: #183154;
+    font-size: 0.9rem;
+    color: white;
 }
 
-/* Novas regras para os ícones sociais */
+/* --- Novas regras para os ícones sociais (30% maiores) --- */
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px; /* Espaçamento entre os ícones */
-  margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espaçamento entre os ícones */
+    margin: 20px 0;
 }
 
 .social-icons a {
-  color: white; /* Cor inicial dos ícones */
-  font-size: 2.2rem; /* Tamanho dos ícones */
-  transition: color 0.3s ease, transform 0.2s ease;
-  text-decoration: none; /* Remove sublinhado dos links */
+    color: white; /* Cor inicial dos ícones */
+    /* Tamanho original era 2.2rem, 2.2 * 1.30 = 2.86rem */
+    font-size: 2.86rem; /* Tamanho dos ícones aumentado em 30% */
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Remove sublinhado dos links */
 }
 
 .social-icons a:hover {
-  color: #f78235; /* Cor dos ícones ao passar o mouse */
-  transform: translateY(-3px); /* Efeito de levante ao passar o mouse */
+    color: #f78235; /* Cor dos ícones ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de levante ao passar o mouse */
+}
+
+/* --- Estilos para o Botão Flutuante do WhatsApp --- */
+.whatsapp-float {
+    position: fixed; /* Fixa o elemento na tela */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    bottom: 40px; /* Distância da parte inferior da tela */
+    right: 40px; /* Distância da parte direita da tela */
+    background-color: #25D366; /* Cor de fundo verde do WhatsApp */
+    color: #FFF; /* Cor do ícone */
+    border-radius: 50%; /* Transforma o botão em um círculo */
+    text-align: center;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3); /* Sombra suave */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    display: flex; /* Para centralizar o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.whatsapp-float:hover {
+    background-color: #1DA851; /* Cor mais escura ao passar o mouse */
+}
+
+.whatsapp-float .whatsapp-icon-fa {
+    font-size: 35px; /* Tamanho do ícone Font Awesome dentro do botão */
 }
