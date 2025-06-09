@@ -1,54 +1,354 @@
+/* Estilos Gerais e Reset */
+body {
+    font-family: 'Arial', sans-serif; /* Uma fonte mais moderna e limpa */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Um fundo suave para o corpo do site */
+    color: #333;
+}
+
+.container {
+    max-width: 1100px; /* Limita a largura do conteúdo para melhor leitura */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Hero Section */
+.hero {
+    background-color: #183154; /* Cor primária forte */
+    color: #ffffff;
+    padding: 80px 20px; /* Mais preenchimento para uma sensação de "herói" */
+    text-align: center;
+    position: relative; /* Para posicionar elementos filhos, se necessário */
+    overflow: hidden; /* Garante que nada transborde */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px; /* Ajuste para a posição do pseudo-elemento */
+    left: -50px;
+    width: 200px; /* Tamanho da forma decorativa */
+    height: 200px;
+    background: rgba(247, 130, 53, 0.1); /* Um toque da cor secundária com transparência */
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse 4s infinite alternate; /* Adiciona uma animação sutil */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 250px;
+    height: 250px;
+    background: rgba(247, 130, 53, 0.15);
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse 4s infinite alternate reverse; /* Animação inversa */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.titulo-site {
+    font-size: 3.5rem; /* Título maior e mais impactante */
+    margin-bottom: 10px;
+    font-weight: 700;
+    position: relative; /* Para ficar acima do pseudo-elemento */
+    z-index: 1;
+}
+
+.subtitulo-site {
+    font-size: 1.5rem; /* Subtítulo mais expressivo */
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation */
 .nav-menu {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+    margin-top: 30px; /* Mais espaço */
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Mais espaço entre os itens */
+    flex-wrap: wrap; /* Garante que os links quebrem linha em telas pequenas */
+    position: relative;
+    z-index: 1;
 }
 
 .nav-menu a {
-  color: #ffffff;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+    color: #ffffff;
+    font-weight: 600; /* Mais destaque */
+    text-decoration: none;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    padding: 8px 15px; /* Adiciona um pouco de padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-menu a:hover {
-  color: #f78235;
+.nav-menu a:hover,
+.nav-menu a.active { /* Adicione uma classe 'active' para a página atual */
+    color: #183154;
+    background-color: #f78235; /* Fundo com a cor secundária no hover */
 }
 
-.intro, .cta {
-  padding: 60px 20px;
-  background-color: #ffffff;
-  text-align: center;
+/* Sections */
+.intro, .cta, .servicos, .dashboard, .services {
+    padding: 80px 20px; /* Aumenta o preenchimento para seções */
+    text-align: center;
+    background-color: #ffffff; /* Fundo branco para as seções */
+    border-bottom: 1px solid #eee; /* Linha sutil para separar seções */
 }
 
-.intro h2, .cta h2 {
-  font-size: 2rem;
-  color: #183154;
-  margin-bottom: 20px;
+/* Ajustes para o .cta */
+.cta {
+    background-color: #183154; /* Fundo escuro para a CTA */
+    color: #ffffff;
+    padding: 100px 20px;
 }
 
-.intro p, .cta p {
-  font-size: 1.2rem;
-  color: #384f6f;
-  max-width: 800px;
-  margin: auto;
-  margin-bottom: 30px;
+.cta h2 {
+    color: #ffffff; /* Título branco */
+    font-size: 2.8rem;
+    margin-bottom: 25px;
 }
 
+.cta p {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+/* Botões */
 .cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #f78235;
-  color: white;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 15px 30px; /* Aumenta o padding do botão */
+    background-color: #f78235;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Aumenta a fonte do botão */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transform */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
 }
 
 .cta-button:hover {
-  background-color: #e06d1f;
+    background-color: #e06d1f;
+    transform: translateY(-3px); /* Efeito de "levantar" */
+}
+
+/* Cards (Serviços e O que você encontrará aqui) */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo com grid */
+    gap: 30px; /* Mais espaço entre os cards */
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #f9f9f9; /* Fundo mais claro para os cards */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    text-align: left; /* Texto alinhado à esquerda dentro do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #f78235; /* Uma linha de cor no topo */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #183154;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Títulos das Seções */
+h2 {
+    font-size: 2.5rem;
+    color: #183154;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.subtexto-dashboard {
+    font-size: 1.4rem;
+    color: #384f6f;
+    margin-bottom: 40px;
+}
+
+/* Iframe Container (Análises) */
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 para iframes responsivos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Fundo preto enquanto carrega */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #183154;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #f78235;
+    transform: translateY(-3px);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Um tom mais escuro no hover */
+    transform: scale(1.05);
+}
+
+.whatsapp-icon-fa {
+    margin-top: 3px; /* Ajuste fino do ícone */
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .titulo-site {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo-site {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .intro p, .cta p {
+        font-size: 1.1rem;
+    }
+
+    .cta h2 {
+        font-size: 2.2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+    .intro, .cta, .servicos, .dashboard, .services {
+        padding: 60px 15px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .titulo-site {
+        font-size: 2rem;
+    }
+
+    .subtitulo-site {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro p, .cta p {
+        font-size: 1rem;
+    }
 }
