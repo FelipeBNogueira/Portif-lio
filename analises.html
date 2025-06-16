@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Custom CSS for font and specific rules not handled by Tailwind -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -20,10 +19,8 @@
 <body class="bg-[#f4f7f6]">
     <!-- Header/Hero Section -->
     <header class="bg-[#183154] text-white py-20 md:py-24 text-center relative overflow-hidden rounded-b-xl">
-        <!-- Decorative shapes for visual interest -->
         <div class="absolute top-0 left-0 w-48 h-48 bg-[#f78235]/10 rounded-full blur-xl transform -translate-x-1/2 -translate-y-1/2"></div>
         <div class="absolute bottom-0 right-0 w-56 h-56 bg-[#f78235]/15 rounded-full blur-xl transform translate-x-1/2 translate-y-1/2"></div>
-        
         <div class="container mx-auto px-4 relative z-10">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Potion Solutions</h1>
             <p class="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 animate-fade-in-up">Data Analysis</p>
@@ -35,13 +32,20 @@
         </div>
     </header>
 
-    <!-- Dashboard Section -->
+    <!-- Dashboard Section com dois painéis -->
     <section class="bg-white py-20 md:py-24 text-center rounded-lg shadow-sm mx-4 md:mx-auto max-w-7xl mt-12 mb-12">
         <div class="container mx-auto px-4">
+            <!-- Novo Painel -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-6">Análise de Performance Comercial</h2>
+            <h3 class="text-lg sm:text-xl text-gray-700 mb-10">Painel com indicadores de performance e insights estratégicos</h3>
+            <div class="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl mx-auto max-w-5xl mb-20">
+                <iframe title="Análise de Performance Comercial - Felipe. N" class="absolute top-0 left-0 w-full h-full border-0" src="https://app.powerbi.com/reportEmbed?reportId=432919f8-491c-4d0c-8d39-2a5f20d69496&autoAuth=true&ctid=51a473a4-2900-4a24-9283-29389669f3dc" allowFullScreen></iframe>
+            </div>
+
+            <!-- Painel Anterior -->
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-6">Análise Comercial</h2>
             <h3 class="text-lg sm:text-xl text-gray-700 mb-10">Transformando dados em decisões com precisão</h3>
             <div class="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl mx-auto max-w-5xl">
-                <!-- 16:9 aspect ratio for responsive iframe -->
                 <iframe title="Painel de vendas Internacionais" class="absolute top-0 left-0 w-full h-full border-0" src="https://app.powerbi.com/view?r=eyJrIjoiMWRkODc0ZGEtODg4OS00N2UxLThiNmItMWNkZWVmOGY5YWI3IiwidCI6IjUxYTQ3M2E0LTI5MDAtNGEyNC05MjgzLTI5Mzg5NjY5ZjNkYyJ9" allowFullScreen></iframe>
             </div>
         </div>
@@ -52,20 +56,25 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#183154] mb-12">O que você encontrará aqui</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Card 1 -->
+                <!-- Card 1 - Novo -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Resumo de Vendas</h3>
-                    <p class="text-gray-600 leading-relaxed">Visualize o desempenho geral de suas vendas com métricas chave e tendências.</p>
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Indicadores Estratégicos</h3>
+                    <p class="text-gray-600 leading-relaxed">Acompanhe os principais KPIs comerciais e visualize sua performance de forma clara e objetiva.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Top Produtos</h3>
-                    <p class="text-gray-600 leading-relaxed">Descubra quais produtos e lojas geram mais receita e impulsionam seus resultados.</p>
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Resumo de Vendas</h3>
+                    <p class="text-gray-600 leading-relaxed">Obtenha uma visão consolidada do desempenho geral das vendas com dados atualizados e insights relevantes.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-semibold text-[#183154] mb-4">Top Produtos</h3>
+                    <p class="text-gray-600 leading-relaxed">Identifique os produtos e canais que mais geram receita e alavanque os melhores resultados.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#f78235] hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
                     <h3 class="text-2xl font-semibold text-[#183154] mb-4">Comparações Detalhadas</h3>
-                    <p class="text-gray-600 leading-relaxed">Compare resultados mensais, trimestrais ou anuais para identificar tendências e oportunidades.</p>
+                    <p class="text-gray-600 leading-relaxed">Analise a evolução de desempenho por período e tome decisões embasadas em dados consistentes.</p>
                 </div>
             </div>
         </div>
